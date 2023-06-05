@@ -8,5 +8,5 @@
 ## Criação de chave SSH e vincular na AWS ##
 
 # ssh-keygen
-# cd ~/.ssh/
+# cd ~/.ss
 

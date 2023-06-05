@@ -8,9 +8,9 @@
 *.tfstate.*
 
 #Chave SSH DEV
-*./env/Dev/ambienteDEV
-*./env/Dev/ambienteDEV.pub
+*/env/Dev/ambienteDEV
+*.pub
 
 #Chave SSH PROD
-*./env/Dev/ambienteProducao
-*./env/Prod/ambienteProducao.dev
+**/env/Prod/ambienteProducao
+
