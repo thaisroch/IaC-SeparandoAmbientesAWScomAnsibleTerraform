@@ -1,2 +1,12 @@
-# Estudo de AWS - TERRAFORM E ANSIBLE
+# Estudo de AWS - TERRAFORM E ANSIBLE ##
+
+# Ambiente de produção e desenvolvimentos
+#    Módulos e variáveis
+# Práticas ágeis em IaC;
+
+
+## Criação de chave SSH e vincular na AWS ##
+
+# ssh-keygen
+# cd ~/.ssh/
 
