@@ -4,3 +4,7 @@ module "ambienteDEV" {
   regiao_aws = "us-west-2"
   chave = "ambienteDEV"
 }
+
+output "IP" {
+  value = module.ambienteDEV.IP_publico
+}
