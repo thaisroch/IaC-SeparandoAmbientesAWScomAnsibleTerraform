@@ -1,5 +1,5 @@
 resource "aws_security_group" "grupo_seguranca_geral" {
-    name = "grupo_seguranca_geral"
+    name = var.security_grupo
     description = "grupo dos ambientes"
     ingress {
         cidr_blocks = ["0.0.0.0/0"] # ipv4

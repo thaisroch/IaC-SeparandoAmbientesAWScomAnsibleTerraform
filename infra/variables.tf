@@ -12,3 +12,10 @@ variable "instancia" {
     type = string
 }
 
+variable "security_grupo" {
+    type = string
+}
+
+variable "instancia_name" {
+    type = string
+}

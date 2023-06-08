@@ -1,0 +1,28 @@
+- hosts: terraform-ansible
+  tasks:
+  - name: Instalando o python3, virtualenv
+    apt:                                       # apt install
+      pkg:                                     # Pacotes
+      - python3
+      - virtualenv
+      update_cache: yes                        # Atualizar apt update(Repositorios), apt upgrade (Dos pacotes).
+    become: yes                                # Executar como root
+
+  - name: Git clone
+    ansible.builtin.git:
+      repo: https://github.com/alura-cursos/clientes-leo-api.git
+      dest: /home/ubuntu/tcc
+      version: master
+  - name: Instalando dependências com pip ( podemos trocar o nome da tarefa)
+    pip:
+      virtualenv: /home/ubuntu/tcc/venv
+      name:
+        - django
+        - djangorestframework 
+
+  - name: Alterando o hosts do settings
+    lineinfile:
+      path: /home/ubuntu/tcc/setup/settings.py
+      regexp: 'ALLOWED_HOSTS'
+      line: 'ALLOWED_HOSTS = ["*"]'
+      backrefs: yes
